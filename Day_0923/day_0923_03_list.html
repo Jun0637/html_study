@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록 관련 태그</title>
+    <style>
+        ol{
+            list-style-type: lower-greek;
+        }
+        ul{
+            list-style-type: square;
+        }
+    </style>
+</head>
+<body>
+    <h2>목록을 표기하는 태그</h2>
+    <P>목록과 관련된 태그 : ul, ol -> 하위태그로 li(개별 항목처리)</P>
+
+    <hr>
+    <h3>순서 없는 목록 작성 : ul(unordered list)</h3>
+    <ul>
+        <li>항목 1</li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+    </ul>
+    <hr>
+    <h3>순서 있는 목록 작성 : ol(ordered list)</h3>
+    <ol>
+        <li>항목 1</li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+    </ol>
+    <hr>
+    <h3>순서 없는 목록 작성 : ul(unordered list)</h3>
+    <!--type수정 가능 : circle, square... -->
+    <ul type="square">
+        <li>항목 1</li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+    </ul>
+    <hr>
+    <h3>순서 있는 목록 작성 : ol(ordered list)</h3>
+    <!--type을 수정할 수 있다. : 숫자(default), a, A, i, I...-->
+    <ol type="a">
+        <li>항목 1</li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+    </ol>
+    <hr>
+    <h3>설명 목록 태그 : dl, dt, dd</h3>
+    <!--dl태그는 첫번째 하위요소가 dt, dt내부에 씌여진 데이터 설명 시 dd
+        dl태그는 다른 요소를 하위로 포함할 수 없다.
+    -->
+    <dl>
+        <dt>HTML</dt>
+        <dd>웹문서의 구조를 작성하는 언어 HyperText Markup Language</dd>
+    </dl>
+    <dl>
+        <dt>CSS</dt>
+        <dd>웹문서의 꾸밈(표현)을 담당하는 언어 Cascading Style Sheet</dd>
+    </dl>
+    <hr>
+    <ol>
+        <li>첫번째 아이템
+            <ul>
+                <li>첫번째 요소</li>
+                <li>두번째 요소</li>
+            </ul>
+        </li>
+        <li>두번째 아이템
+            <ul>
+                <li>첫번째 요소</li>
+                <li>두번째 요소</li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>
