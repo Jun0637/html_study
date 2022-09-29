@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 연습</title>
+    <link rel="stylesheet" href="./style/form.css">
+</head>
+
+<body>
+    <div class="content">
+        <h2>다양한 폼 태그</h2>
+        <form method="post">
+            <table>
+                <tr>
+                    <th><label for="usrid">사용자 아이디</label></th>
+                    <td>
+                        <input type="text" id="usrid" name="usrid" placeholder="5~8사이 아이디" maxlength="8">
+                        <input type="button" value="중복확인">
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="usrname">사용자 이름</label></th>
+                    <td><input type="text" id="usrname" name="usrname" placeholder="실명입력"></td>
+                </tr>
+                <tr>
+                    <th><label for="usrpwd">비밀번호</label></th>
+                    <td><input type="password" id="usrpwe" name="usrpwe" placeholder="5~8사이 비밀번호 입력"></td>
+                </tr>
+                <tr>
+                    <th><label for="email">이메일</label></th>
+                    <td><input type="email" id="email" name="email" placeholder="이메일 입력"></td>
+                </tr>
+                <tr>
+                    <th><label for="gender">성별</label></th>
+                    <td>
+                        <input id="women" type="radio" name="gender" value="여자">여자
+                        <input id="man" type="radio" name="gender" value="남자" checked>남자
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="hobby">취미</label></th>
+                    <td>
+                        <input id="scoore" type="checkbox" name="hobby" value="축구">축구
+                        <input id="baseball" type="checkbox" name="hobby" value="야구">야구
+                        <input id="volleyball" type="checkbox" name="hobby" value="배구">배구
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="birthday">생일</label></th>
+                    <td><input id="birthday" type="date" name="birthday"></td>
+                </tr>
+                <tr>
+                    <th><label for="location">지역</label></th>
+                    <td>
+                        <select id="location" name="location">
+                            <optgroup label="서울">
+                                <option value="강남구">강남구</option>
+                                <option value="동작구" selected="selected">동작구</option>
+                                <option value="영등포구">영등포구</option>
+                                <option value="관악구">관악구</option>
+                            </optgroup>
+                            <optgroup label="기타">
+                                <option value="제주">제주</option>
+                                <option value="원주">원주</option>
+                                <option value="인천">인천</option>
+                                <option value="부산">부산</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="location2">지역2</label></th>
+                    <td>
+                        <select id="location2" size="3" name="location2" multiple>
+                            <optgroup label="서울">
+                                <option value="강남구">강남구</option>
+                                <option value="동작구">동작구</option>
+                                <option value="영등포구">영등포구</option>
+                                <option value="관악구">관악구</option>
+                            </optgroup>
+                            <optgroup label="기타">
+                                <option value="제주">제주</option>
+                                <option value="원주">원주</option>
+                                <option value="인천">인천</option>
+                                <option value="부산">부산</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="opinion">의견</label></th>
+                    <td>
+                        <textarea name="opinion" rows="5" cols="50"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <input type="submit" value="전송">
+                        <input type="reset" value="취소">
+                        <input type="image" src="./images/button.png" height="40px">
+                        <button type="button">임시버튼</button>
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

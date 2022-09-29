@@ -1,0 +1,33 @@
+div.content{
+    width: 800px;/*block 태그는 폭을 가질 수 있다.*/
+    background-color: darkgray;
+    margin: 0 auto;/*상단에서부터 시계방향*/
+}
+div.content>h2{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px 20px 0;
+}
+table{
+    width: 800px;
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+tr, td, th{/*태그 : 1, 클래스 : 10, 아이디 : 100*/
+    border: 1px solid gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/*th 태그의 폭을 200px*/
+th{
+    width: 200px;
+}
+/*td태그의 안쪽 여백(좌) 10px;*/
+td{
+    padding-left: 10px;
+}
+input[type="text"], input[type="password"], input[type="email"]{
+    width: 400px;
+    height: 20px;
+}
