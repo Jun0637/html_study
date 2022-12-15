@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>타이틀</title>
+        <style>
+            table{
+                border : 2px solid #555;
+                border-collapse: collapse;/*separate : 기본값, collapse : 테두리 병합 */
+            }
+            table thead{
+                background-color: violet;
+            }
+            table th, table td{
+                border: 1px solid #eee;
+                padding: 10px; /*셀(텍스트 콘텐츠)과 테두리 사이 여백*/
+            }
+            </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <ul>
+                <li>책</li>
+                <li>스마트폰</li>
+                <li>컴퓨터</li>
+                <li>마우스</li>
+                <li>이어폰</li>
+            </ul>
+        </div>
+        <hr>
+        <ul>
+            <li>
+                <a href="https://www.google.com" target="_self">Google</a>
+            </li>
+            <li>
+                <a href="https://youtube.com" target="_blank">YOUTUBE</a>
+            </li>
+            <li>
+                <a href="https://comic.naver.com/index" target="web">웹툰</a>
+            </li>
+            <li>
+                <a href="https://daum.net" target="web">다음</a>
+            </li>
+        </ul>
+        <hr>
+        <table>
+            <tr>
+                <td>번호</td>
+                <td>이름</td>
+                <td>java</td>
+                <td>일본어</td>
+                <td>basic</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>홍길동</td>
+                <td>10</td>
+                <td>20</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>임꺽정</td>
+                <td>10</td>
+                <td>20</td>
+                <td>30</td>
+            </tr>
+                <td>3</td>
+                <td>손오공</td>
+                <td>10</td>
+                <td>20</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td colspan="2">합계</td>
+                <td>10</td>
+                <td>60</td>
+                <td>90</td>
+            </tr>
+          </table>
+          <hr>
+          <blockquote>인용한 문자입니다.(출처 : 나)</blockquote>
+          <hr>
+          <h2>로컬 스토리지(Local Storage)를 저장하는 함수 : </h2>
+          <pre>
+            function savetheLocal(){
+                var second = document.getElementById("second");
+                var thevalue = second.value;
+                localStorage.setItem(1, thevalue);
+                gettheLocal();
+            }
+          </pre>
+          <hr>
+          <p>
+            뛰어         쓰기<br>
+            뛰어&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp쓰기
+          </p>
+          <hr>
+          <strong>굵게 강조할 텍스트</strong><br>
+          <b>굵게 표시할 텍스트</b><br><hr>
+          <i>이텔릭체로 표시할 텍스트</i><br>
+          <em>이텔릭체로 강조할 텍스트</em>
+    </body>
+</html>
