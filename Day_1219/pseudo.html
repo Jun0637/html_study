@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상선택자</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        a:link{color: blue;}
+        a:visited{color: red;}
+        a:hover{color: purple; font-weight: bold;}
+        a:active{color: green;}
+
+        li:nth-child(3n){
+            color: coral;
+        }
+        th {background: yellowgreen;}
+            tbody tr:nth-child(2n+1){background:lightgray;}
+            tbody tr:hover{font-weight: bold; color:red; cursor: pointer;}
+
+            p.intro::first-letter{font-size: 200%;}
+            p.intro::first-line{font-weight:bold;}
+            p:last-child::after{
+                content: "(원본:www.naver.com)";
+                color: blue;
+            }
+    </style>
+</head>
+<body>
+    <a href="http://naver.com">네이버</a>&nbsp;&nbsp;
+    <a href="http://nate.com">네이트</a>&nbsp;&nbsp;
+    <a href="http://w3schools.com">w3chools</a>&nbsp;&nbsp;
+    <hr>
+
+    <ul>
+        <li>첫 번째</li>
+        <li>두 번째</li>
+        <li>세 번째</li>
+        <li>네 번째</li>
+        <li>다섯 번째</li>
+        <li>여섯 번째</li>
+    </ul>
+    <hr>
+    <caption>3-2반 성적</caption>
+    <table border="1">
+        <tr>
+            <td>이름</td>
+            <td>국어</td>
+            <td>영어</td>
+        </tr>
+        <tbody>
+        <tr>
+            <td>홍길동</td>
+            <td>10</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>임꺽정</td>
+            <td>10</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>삼장법사</td>
+            <td>10</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>사오정</td>
+            <td>10</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>저팔계</td>
+            <td>10</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>손오공</td>
+            <td>10</td>
+            <td>20</td>
+        </tr>
+    </tbody>
+      </table>
+      <hr>
+      <h1>CSS는 Cascading Style Sheet</h1>
+      <h3>CSS는 무엇인가요?</h3>
+      <p class="intro">CSS는 Cascading Style Sheet의 약자로 웹화면의 디자인을 처리한다.</p>
+      <p>CSS는 HTML 문서의 각 요소가 어떻게 화면에 출력될지 결정한다.</p>
+</body>
+</html>

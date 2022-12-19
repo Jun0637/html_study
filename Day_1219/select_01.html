@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복합 선택자 연습</title>
+    <style>
+        div div{
+            background-color: #fc6aad; color:#0076ff;
+        }
+        div p{
+            background-color: #ffb100; color: #0076ff;
+        }
+       div> div {
+            background-color: #fc6aad; color: #0076ff;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>p태그입니다.-1</p>
+        <div>
+            <ul>
+                <li><p>p태그입니다.-2</p></li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
