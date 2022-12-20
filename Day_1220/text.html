@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text 관련 CSS</title>
+    <style>
+        p.container{
+            border: 1px solid #ccc;
+            width: 300px;
+            height: 100px;
+            /* white-space: nowrap; */
+            overflow: auto;
+            /* text-overflow: clip; */
+        }
+       /* li{
+            display: inline-block; 가로
+        } */
+        li{
+            padding-top: 12px;
+            list-style-type: none;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            border: 1px solid yellowgreen;
+        }
+        li:hover{background: yellowgreen;
+        cursor: pointer;
+        }
+        h2{
+            display: none;
+        }
+        
+    </style>
+    <script>
+        //alert("멈춰!"); 문서끝까지 가지도못하고 경고창 출력(렌더링 못함)
+        window.onload = function(){//html문서 끝까지 진행하고 나서 함수를 실행하시오.
+           // alert("멈춰!"); 문서끝까지 갓다와서 경고창 출력(렌더링 못함)
+           let temp = document.getElementById("intro"); // 이벤트소스
+           let temps = document.getElementById("ind");
+           let data, book = null;
+           /*let temp  = "문자열 입니다.";*/
+           temp.onmouseover = function(){
+            data = document.getElementById("data");
+            data.style.display = "block";
+           }
+           temp.onmouseout = function(){
+            data.style.display = "none";
+            }
+            temps.onmouseover = function(){
+            data = document.getElementById("book");
+            data.style.display = "block";
+           }
+           temps.onmouseout = function(){
+            data.style.display = "none";
+            }
+        }   
+    </script>
+</head>
+<body>
+    <ul>
+        <li id="intro">회사소개</li>
+        <li id="ind">도서소개</li>
+        <li>자료실</li>
+        <li>질문답변</li>
+        <li>동영상 강의</li>
+    </ul>
+    <h2 id="data">회사소개:
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Aspernatur modi dolorem tempore quam facere voluptatem aut
+        nemo veritatis et neque corrupti eius nam saepe iusto nulla 
+        consequatur voluptatum, pariatur doloribus?</h2>
+    <h2 id="book">도서소개:
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Aspernatur modi dolorem tempore quam facere voluptatem aut
+        nemo veritatis et neque corrupti eius nam saepe iusto nulla 
+        consequatur voluptatum, pariatur doloribus?</h2>
+</body>
+</html>
