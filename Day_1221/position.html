@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        div.parent{
+            border: 1px solid #aaa;
+            padding: 10px;
+            position: relative;
+        }
+        div.sibling{
+            background-color: skyblue;
+            padding: 5px;
+            text-align: center;
+        }
+        div.second{
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+        }
+        div.static{
+            position: static;
+            top: 20px;
+            left: 20px;
+        }
+        div.relative{
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+        div.absolute{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        div.fixed{
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <a href="target"></a>
+    <h1>Position 연습</h1><!--static, relative, absolute, fixed-->
+    <h2>Static (default)</h2>
+    <div class="parent">
+        <div class="sibling">First</div>
+        <div class="second static">Second</div>
+        <div class="sibling">Thrid</div>
+        <a href="target"></a>
+    </div>
+
+    <h2>Relative</h2>
+    <div class="parent">
+        <div class="sibling">First</div>
+        <div class="second relative">Second</div>
+        <div class="sibling">Thrid</div>
+    </div>
+
+    <h2>Absolute</h2>
+    <div class="parent">
+        <div class="sibling">First</div>
+        <div class="second absolute">Second</div>
+        <div class="sibling">Thrid</div>
+    </div>
+
+    <h2>Fixed</h2>
+    <div class="parent">
+        <div class="sibling">First</div>
+        <div class="second fixed"><a href="#top">Second</a></div>
+        <div class="sibling">Thrid</div>
+    </div>
+</body>
+</html>
