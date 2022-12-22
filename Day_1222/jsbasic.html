@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+        //자료형 연습
+        let num = 10;
+        let str = "안녕하세요?";
+        let bool = true;
+        let ary = [];
+        let obj = {};
+        let dontexist;
+
+        let result = (typeof num) + '<br>';
+        result += (typeof str) + '<br>';
+        result += (typeof bool) + '<br>';
+        result += (typeof ary) + '<br>';
+        result += (typeof obj) + '<br>';
+        result += (typeof dontexist) + '<br>';
+
+
+        let htmlobj = document.getElementById("test");
+        htmlobj.innerHTML = result;
+
+        // =====
+        // + : 문자열 결합, 덧셈, 부호유지
+        // = : 대입
+        // += : 더한 후 대입(복합연산자)   
+        let tag = document.getElementById("tag");
+        let data = tag.innerHTML;
+        alert(data);
+
+    }
+    </script>
+</head>
+<body>
+    <h2 id="test"></h2>
+    <p id="tag">나리나리 개나리</p>
+</body>
+</html>

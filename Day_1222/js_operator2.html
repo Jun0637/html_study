@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교연산자</title>
+    <script>
+        // >   <   >=   <=    ==    !=  ===   !==
+        window.onload = function(){
+            let x = 5;
+            let y = 3;
+
+            let z ='5>3 = ' + (x>y) + '<br>';
+            z +='5<3 = ' + (x<y) + '<br>';
+            z +='5>=3 = ' + (x>=y) + '<br>';
+            z +='5<=3 = ' + (x<=y) + '<br>';
+            z +='5==3 = ' + (x==y) + '<br>';
+            z +='5!=3 = ' + (x!=y) + '<br><br>';
+            
+            //타입과 상관없이 값만 비교
+            x = "3";
+            y = 3;
+            z +='"3"==3 = ' + (x==y) + '<br>'; // 데이터의 타입이 달라도 unboxing
+            z +='3!=3 = ' + (x!=y) + '<br><br>';
+
+            //타입과 값을 고려하여 비교
+            z +='3===3 = ' + (x===y) + '<br>'; // 값이 같아도 타입이 다르면 다름
+            z +='3!==3 = ' + (x!==y) + '<br><br>';
+
+            // 문자열도 비교도 가능. 자바의 equals()아님
+            x = "Kim";
+            y = "Lee";
+            z +='Kim===Lee = ' + (x===y) + '<br>'; // 값이 같아도 타입이 다르면 다름
+            z +='Kim!==Lee = ' + (x!==y) + '<br>';
+
+            let result = document.getElementById("result");
+            result.innerHTML = z;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+<h2 id="result"></h2>
+</html>

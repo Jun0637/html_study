@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 연산자</title>
+    <script>
+        window.onload=function(){
+            //연산자
+            let x = 5;
+            let y = 3;
+            
+            let data = '';
+            data += '- 더하기 : ' + (x+y) +'<br>';
+            data += '- 빼기 : ' + (x-y) +'<br>';
+            data += '- 곱하기 : ' + (x*y) + '<br>';
+            data += '- 나누기 : ' + (x/y) + '<br>';
+
+            let result = document.getElementById("result");
+            result.innerHTML = data;
+
+        }
+    </script>
+</head>
+<body>
+    <h2 id="result"></h2>
+</body>
+</html>
