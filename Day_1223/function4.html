@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더하기</title>
+    <script>
+            function calc(){
+                let x = document.getElementById("x");
+                let y = document.getElementById("y");
+                if(isNaN(x.value)){
+                     alert("X에 숫자입력");
+                     x.focus();
+                     x.select();
+                    return;
+                 }
+                if(isNaN(y.value)){
+                    alert("Y에 숫자입력")
+                    y.focus();
+                    y.select();
+                    return;
+                }
+                let result = parseInt(x.value) + parseInt(y.value);
+                document.getElementById("result").value = result;
+            }
+            function clr(){
+                document.getElementById("x").value ='';
+                document.getElementById("y").value ='';
+                document.getElementById("result").value ='';
+                
+            }
+    </script>
+</head>
+<body>
+   <h2>더하기 연산</h2>
+   <label for = "x">X : </label>
+   <input id = "x" type= "text">
+
+   <label for = "y">Y : </label>
+   <input id = "y" type= "text">
+
+   <input id="add" type="button" onclick="calc();" value="+">
+   <input id="clear" type="button" onclick="clr();" value="C">
+
+   <input id="result" type="text" readonly>
+</body>
+</html>

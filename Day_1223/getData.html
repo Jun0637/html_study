@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let btn = document.getElementById("btn");
+            btn.onclick = function(){
+            //    let data = document.getElementById("header").innerHTML;
+            //    alert(data);
+
+            //    let usrname = document.getElementById("usrname").value;
+            //    alert(usrname);
+
+            //     let img = document.getElementById("cat").getAttribute("src");
+            //     alert(img);
+            document.getElementById("header").innerHTML = "값을 빠꿉니다.";
+            document.getElementById("usrname").value = "손오공";
+            let img = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjExMjRfMjE3%2FMDAxNjY5Mjc3NTM4MTM1.hIfoVbGwyNBS90l_QDlrCDmWnAVVe0sM2gw5jZ5fP2gg.8idqxFx4FsV7RSqnfM2leAlnJ9dM0tpCtlMwitJypycg.JPEG.chloeechae%2FIMG_6946.jpg&type=sc960_832";
+            document.getElementById("cat").setAttribute("src", img);
+             }
+            
+        }
+    </script>
+</head>
+<body>
+    <h2 id="header">이것은 h2</h2>
+    <input id="usrname" type="text" placeholder="이름을 입력"><br>
+    <img id="cat" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjExMjVfNzAg%2FMDAxNjY5MzQ3NTkxODEy.Vy_dAxHfKUbiCKta6xzBjzKMCWEdJusdRIdOMJPU4sUg.HFkL1um11FGO3xv3FRf3cVRy8l14UvR7EUTHcbS940Yg.JPEG.skdlzl8686%2F%25B0%25ED%25BE%25E7%25C0%25CC14.jpg&type=a340">
+    <br>
+    <input id="btn" type="button" value="Click">
+</body>
+</html>

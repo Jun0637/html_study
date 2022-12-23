@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더하기</title>
+    <script>
+        window.onload = function(){
+            
+            document.getElementById("add").onclick = function(){
+               let x = document.getElementById("x").value;
+                let y = document.getElementById("y").value;
+                if(isNaN(x) || isNaN(y)){
+                    alert("숫자입력해주세요")
+                    return;
+                }
+                let c = parseInt(x) + parseInt(y);
+                document.getElementById("result").value = c;
+            }
+        }
+
+        // 문자가 포함되어 있으면 true
+    </script>
+</head>
+<body>
+    <label id="id">id : </label>
+    <input id="x" type="text" placeholder="">
+    <input id="y" type="text" placeholder="">
+    <input id="add" type="button" onclick="" value="+">
+    <input id="result" type="text">
+    
+    
+</body>
+</html>
