@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 Math 객체</title>
+    <script>
+        window.onload = function(){
+            let num = 2.1234;
+
+            let maxNum = Math.max(10, 5, 8, 300);
+            minNum = Math.min(10, 5, 8, 30);
+            roundNum = Math.round(num);
+            floorNum = Math.floor(num);
+            ceilNum = Math.ceil(num);
+            piNum = Math.random();
+
+            let data = `최대값 : ${maxNum}<br>`;
+            data += `최소값 : ${minNum}<br>`;
+            data += `반올림 : ${roundNum}<br>`;
+            data += `내림 : ${floorNum}<br>`;
+            data += `올림 : ${ceilNum}<br>`;
+            data += `랜덤 : ${piNum}<br>`;
+
+            target.innerHTML = data;
+        }
+    </script>
+</head>
+<body>
+    <h2 id="target"></h2>
+</body>
+</html>
