@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>문자열 관련 메소드</title>
+    <style>
+        input[type='radio']{
+            color: red;
+        }
+    </style>
     <script>
         function confirm(){
+          
             let usrid = document.getElementById("usrid");
             let usrpwd = document.getElementById("usrpwd");
-            let gender = document.getElementsByName("gender");
-            alert(gender[0].value);
 
             if(!(usrid.value.trim().length >= 5 && usrid.value.trim().length <= 10)){
                 alert("아이디는 5~10가지로 입력");
@@ -24,7 +28,42 @@
                 usrpwd.select();
                 return false;
             }
-            
+            //성별 추출
+            // GetElementsByName()로 라디오버튼 데이터 얻어오기
+          /*  let gender = document.getElementsByName("gender"); //배열
+            let gtemp = '';
+            for(let i = 0; i<gender.length; ++i){
+                if(gender[i].checked){
+                    gtemp = gender[i].value;
+                }
+            }*/
+            // 2 querySelector()로 라디오버튼 데이터 얻오오기
+            let gender = document.querySelector("input[type='radio']:checked")
+            let g = gender.value;
+
+            //----------checkbox 데이터 가져오기
+            // GetElementsByName()로 라디오버튼 데이터 얻어오기
+          /*  document.getElementsByName("hobby");
+            let htemp = '';
+            for(let i=0; i<hobby; ++i){
+                if(hobby[i].checked){
+                    htemp += hobby[i].value + ' ';
+                }
+            }*/
+            //2) querySelectorAll()로 체크박스 데이터 얻어오기
+            let hobby = document.querySelectorAll("input[type='checkbox']:checked")
+            let htemp = '';
+            for(let i=0; i<hobby.length; ++i){
+                htemp += hobby[i].value + '';
+            }
+
+            let job = document.getElementById("job").value;
+            alert(job);
+
+            return true;
+
+            let etc = document.getElementById("etc").value;
+            alert(etc);
         }
     </script>
 </head>
@@ -35,11 +74,30 @@
     <label for="usrpwd">비밀번호 : </label>
     <input id="usrpwd" type="passwd" name="usrpwd" placeholder="5~10자리 입력"><br>
     
+    
     <label>성별 :
-        <input type="radio" name="gender" value="남성">남성
+        <input type="radio" name="gender" value="남성" checked>남성
         <input type="radio" name="gender" value="여성">여성
+    </label><br>
+    <label>취미 :
+        <input type="checkbox" name="hobby" value="축구" checked>축구
+        <input type="checkbox" name="hobby" value="농구" >농구
+        <input type="checkbox" name="hobby" value="야구" >야구
+        <input type="checkbox" name="hobby" value="배구" >배구
     </label>
-    <br>
+    <br><br>
+    <label>당신의 직업은?
+        <select id="job">
+            <option>보안전문가</option>
+            <option>웹서버개발자</option>
+            <option>Dev/Ops 전문가</option>
+            <option>데이터 분석전문가</option>
+            <option>웹 퍼블리셔</option>
+        </select>
+    </label><br>
+    <label>기타의견 :
+        <textarea id="etc" rows="10" cols="30"></textarea>
+    </label>a
     <input type="submit" value="회원가입">
 </form>
 </body>
