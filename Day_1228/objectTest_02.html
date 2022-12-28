@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = memlist;
+        function memlist(){
+            let list = [{"이름":"홍길동", "등급":"일반회원", "가입일":"20/12/28"},
+                        {"이름":"손오공", "등급":"실버회원", "가입일":"20/12/27"},
+                        {"이름":"임꺽정", "등급":"골드회원", "가입일":"20/12/26"}];
+            let tag = '<table border="1">';
+            tag += "<tr><th>이름</th><th>등급</th><th>가입일</th></tr>"
+            tag += "<tr><th>홍길동</th><th>일반회원</th><th>20/12/28</th></tr>"
+            tag += "<tr><th>손오공</th><th>실버회원</th><th>20/12/27</th></tr>"
+            tag += "<tr><th>임꺽정</th><th>골드회원</th><th>20/12/26</th></tr>"
+            //반복
+            
+            tag += '</table>';
+            document.getElementById("target").innerHTML = tag;
+        }
+    </script>
+</head>
+<body>
+    <div id="target">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열의 메소드</title>
+    <script>
+        let greenArr = ["교대", "방배", "강남"];
+        let yellowArr = ["미금", "정자", "옥수"];
+
+        greenArr.splice(2, 1, "서초", "역삼");
+        console.log(greenArr);
+
+        let data1 = yellowArr.pop();
+        let data2 = yellowArr.shift();
+
+        yellowArr.push(data2);
+        console.log(yellowArr);
+
+        yellowArr.unshift(data1);
+        console.log(yellowArr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

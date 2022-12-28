@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        window.onload = function(){
+            let imgs = ["./images/img01.jfif","./images/img02.jfif","./images/img03.jfif"];
+            let i = 1;
+            // setInterval,. setAttibute
+            setInterval(function(){
+                let img = document.getElementById("target");
+                img.setAttribute("src", imgs[i++]);
+                if(i>3) i=0;
+            }, 1000);
+        }
+    </script>
+</head>
+<body>
+    <h2>이미지처리</h2>
+    <p>
+        <img id="target" src="./images/img01.jfif" width="500px">
+    </p>
+</body>
+</html>
