@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let data = {usrid : "123", usrname : "홍길동", height:176.5, weight:55};
+            
+            
+            let target = document.querySelector("h2#target");
+            let tag = '';
+            let usrid = data['usrid'];
+            let usrname = data['usrname'];
+            let height = data['height'];
+            let weight = data['weight'];
+            let bmi = weight / ((height*0.01)**2);
+
+            tag += `아이디 : ${usrid} <br>`;
+            tag += `이름 : ${usrname} <br>`;
+            tag += `키 : ${height} <br>`;
+            tag += `몸무게 : ${weight} <br>`;
+            tag += `체질량지수 : ${bmi} <br>`;
+
+            target.innerHTML = tag;
+        }
+    </script>
+</head>
+<body>
+    <h2 id="target"></h2>
+</body>
+</html>
